@@ -1,6 +1,6 @@
 # [Goat Island Lightflow](http://i.imgur.com/M1t4CkC.jpg)
 
-[![Codeship Status for eubenesa/goat-island-lightflow](https://codeship.io/projects/5717b620-0f85-0132-1c34-2204b975dd06/status)](https://codeship.io/projects/32660)
+[![Codeship Status for eubenesa/goat-island-lightflow](https://codeship.io/projects/d759f9a0-0f87-0132-3a96-42e120fa204e/status)](https://codeship.io/projects/32662)
 
 Lighthouse Labs final project  
 Brought to you by Eubene Sa
