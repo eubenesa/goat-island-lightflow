@@ -1,6 +1,6 @@
 # [Goat Island Lightflow](http://i.imgur.com/M1t4CkC.jpg)
 
-
+[![Codeship Status for eubenesa/goat-island-lightflow](https://codeship.io/projects/5717b620-0f85-0132-1c34-2204b975dd06/status)](https://codeship.io/projects/32660)
 
 Lighthouse Labs final project  
 Brought to you by Eubene Sa
@@ -25,6 +25,7 @@ Brought to you by Eubene Sa
 ## Debugging
 
 Ideally, you should have at least 4 tabs open in your CLI for debugging. Run these commands from the repository's root directory:  
+  
 1. `bin/rails server`  
 2. `bin/rails console`  
 3. `bin/rails dbconsole`  
