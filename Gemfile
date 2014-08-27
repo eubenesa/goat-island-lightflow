@@ -46,4 +46,6 @@ gem 'ember-rails'
 gem 'ember-source'
 # gem 'emblem-rails'
 
+gem 'devise'
+gem 'omniauth-github'
 gem 'slim-rails'
