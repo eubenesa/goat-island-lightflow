@@ -1,8 +1,8 @@
 class AnswerSerializer < ActiveModel::Serializer
   attributes :id, :content, :upvotes, :updated_at
 
-  belongs_to :user_id
-  belongs_to :question_id
+  belongs_to :user
+  belongs_to :question
 
   url [:question, :answer]
 end
