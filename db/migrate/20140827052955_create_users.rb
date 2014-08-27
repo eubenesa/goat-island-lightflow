@@ -3,7 +3,7 @@ class CreateUsers < ActiveRecord::Migration
     create_table :users do |t|
       t.string :uid
       t.string :github_username
-      t.boolean :lhl_member
+      t.boolean :lhl_member, :default => false
       t.string :token
 
       t.timestamps
