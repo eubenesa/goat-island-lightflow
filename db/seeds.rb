@@ -5,3 +5,16 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+Question.destroy_all
+
+categories = ["git", "unix", "ruby", "sql", "sinatra", "rails", "javascript", "jquery", "node"]
+
+50.times do
+  Question.create(
+    subject: Faker::Lorem.sentence + "?",
+    content: Faker::Lorem.paragraph,
+    category: categories[Random.new.rand(0...categories.length)],
+    upvotes: [1],
+    user_id: 1
+  );
+end

@@ -41,6 +41,7 @@ gem 'spring',        group: :development
 
 group :development, :test do
   gem 'dotenv-rails'
+  gem 'ffaker'
   gem 'pry-rails'
   gem 'rspec-rails'
 end

@@ -5,14 +5,12 @@ class ApplicationController < ActionController::Base
 
   helper_method :current_user
 
-  before_action :redirect_user
+  before_action :require_login_lhl_member
 
-  def redirect_user
-    # if current_user
-    #   redirect_to
-    # else
-    #   redirect_to :root
-    # end
+  def require_login_lhl_member
+    unless current_user && @current_user.lhl_member
+      redirect_to welcome_path
+    end
   end
 
   def current_user
