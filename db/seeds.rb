@@ -11,8 +11,8 @@ categories = ["git", "unix", "ruby", "sql", "sinatra", "rails", "javascript", "j
 
 50.times do
   Question.create(
-    subject: Faker::Lorem.sentence + "?",
-    content: Faker::Lorem.paragraph,
+    subject: Faker::HipsterIpsum.sentence[0..-2] + "?",
+    content: Faker::HipsterIpsum.paragraph,
     category: categories[Random.new.rand(0...categories.length)],
     upvotes: [1],
     user_id: 1

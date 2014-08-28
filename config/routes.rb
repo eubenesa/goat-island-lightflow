@@ -58,8 +58,8 @@ Rails.application.routes.draw do
   #   end
   namespace :api do
     namespace :v1 do
-      resources :questions do
-        resources :answers
+      resources :questions, except: [:new, :edit] do
+        resources :answers, except: [:new, :edit]
       end
     end
   end

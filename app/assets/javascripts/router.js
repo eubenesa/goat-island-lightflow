@@ -1,8 +1,8 @@
 // For more information see: http://emberjs.com/guides/routing/
 App.Router.reopen({
-  location: 'auto',
-  rootURL: '/questions'
+  rootURL: '/',
+  location: 'auto'
 })
 
-App.Router.map(function() {  
+App.Router.map(function() {
 });
