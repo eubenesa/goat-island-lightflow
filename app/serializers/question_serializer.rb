@@ -1,8 +1,5 @@
 class QuestionSerializer < ActiveModel::Serializer
-  attributes :id, :subject, :content, :category, :upvotes, :updated_at
+  attributes :id, :subject, :content, :category, :upvotes, :user_id, :updated_at
 
-  belongs_to :user
   has_many :answers
-
-  url :question  
 end
