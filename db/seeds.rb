@@ -21,6 +21,15 @@ categories = ["git", "unix", "ruby", "sql", "sinatra", "rails", "javascript", "j
     content: Faker::HipsterIpsum.paragraph,
     category: categories[Random.new.rand(0...categories.length)],
     upvotes: [1, 2, 3],
-    user_id: (1..11)
+    user_id: Random.new.rand(1..10)
+  )
+end
+
+50.times do
+  Answer.create(
+    content: Faker::HipsterIpsum.paragraph,
+    upvotes: [1, 2, 3],
+    user_id: Random.new.rand(1..10),
+    question_id: Random.new.rand(1..50)
   )
 end
