@@ -1,15 +1,15 @@
 br
 br
 
-- if current_user && !current_user.lhl_member
-  / - if current_user.lhl_member
+- if current_user
+  - if current_user.lhl_member
   /   p Signed in!
   /   a href="/signout" Sign out
-  / - else
-  p
-    | Hello there. We're currently adding you to the Lighthouse Labs family. Refresh the page in a bit or 
-    a href="mailto:don@lighthouselabs.ca?Subject=Goat%20Island%20Lightflow%20access" email Don
-    |  if you're desperate for access.
+  - else
+    p
+      | Hello there. We're currently adding you to the Lighthouse Labs family. Refresh the page in a bit or 
+      a href="mailto:don@lighthouselabs.ca?Subject=Goat%20Island%20Lightflow%20access" email Don
+      |  if you're desperate for access.
 - else
   a class="pure-button button-xlarge" href="/auth/github"
     i class="fa fa-github fa-lg"

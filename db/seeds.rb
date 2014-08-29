@@ -5,7 +5,13 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-Question.destroy_all
+
+10.times do
+  User.create(
+    github_username: Faker::Internet.user_name,
+    lhl_member: true
+  )
+end
 
 categories = ["git", "unix", "ruby", "sql", "sinatra", "rails", "javascript", "jquery", "node"]
 
@@ -14,7 +20,7 @@ categories = ["git", "unix", "ruby", "sql", "sinatra", "rails", "javascript", "j
     subject: Faker::HipsterIpsum.sentence[0..-2] + "?",
     content: Faker::HipsterIpsum.paragraph,
     category: categories[Random.new.rand(0...categories.length)],
-    upvotes: [1],
-    user_id: 1
-  );
+    upvotes: [1, 2, 3],
+    user_id: (1..11)
+  )
 end

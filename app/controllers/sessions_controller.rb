@@ -1,5 +1,7 @@
 class SessionsController < ApplicationController
-  skip_before_action :require_login_lhl_member
+  skip_before_action :require_login_lhl_member, only: [:create]
+
+  before_action :redirect_if_lhl_member, except: [:destroy]
 
   def create
     auth = request.env['omniauth.auth']
