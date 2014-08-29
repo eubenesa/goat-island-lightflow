@@ -13,7 +13,6 @@
 //= require jquery
 //= require jquery_ujs
 
-//= require jquery
 //= require handlebars
 //= require ember
 //= require ember-data
@@ -22,10 +21,12 @@
 
 // for more details see: http://emberjs.com/guides/application/
 App = Ember.Application.create({
+  rootElement: '#ember-app',
+
   // Route
   LOG_TRANSITIONS: true,
   LOG_TRANSITIONS_INTERNAL: true,
-  
+
   // Controller
   LOG_ACTIVE_GENERATION: true,
 
