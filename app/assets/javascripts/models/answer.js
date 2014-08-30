@@ -1,10 +1,8 @@
-var attr = DS.attr;
-
 App.Answer = DS.Model.extend({
-  content: attr('string'),
+  content: DS.attr('string'),
   // upvotes
-  updated_at: attr('date'),
+  updated_at: DS.attr('date'),
 
-  user: DS.belongsTo('user'),
-  question: DS.belongsTo('question')
+  user: DS.belongsTo('user', { async: true }),
+  question: DS.belongsTo('question', { async: true })
 });

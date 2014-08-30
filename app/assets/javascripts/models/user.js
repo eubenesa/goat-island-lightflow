@@ -1,8 +1,6 @@
-var attr = DS.attr;
-
 App.User = DS.Model.extend({
-  github_username: attr('string'),
+  github_username: DS.attr('string'),
 
-  questions: DS.hasMany('question'),
-  answers: DS.hasMany('answer')
+  questions: DS.hasMany('question', {async: true}),
+  answers: DS.hasMany('answer', { async: true })
 });
