@@ -2,11 +2,11 @@
 <hr>
 
 {{#each question in controller}}
-  <h3>{{question.subject}}</h2>
-  <p>{{question.content}}</p>
-  <p>{{question.category}}</p>
-  <p>{{question.formattedUpdatedAt}}</p>
-{{!--   upvotes count --}}
-{{!--   question.user.github_username --}}
+  <p><b>Subject</b>: {{question.subject}}</p>
+  <p><b>Content</b>: {{question.content}}</p>
+  <p><b>Category</b>: {{question.category}}</p>
+
+  <p><b>Upvotes</b>: {{question.upvotesLength}}</p>
+  <p><b>Updated</b>: {{question.formattedUpdatedAt}}</p>
   <hr>
 {{/each}}
