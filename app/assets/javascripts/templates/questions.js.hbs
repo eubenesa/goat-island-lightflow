@@ -1,0 +1,12 @@
+<h1>Questions</h1>
+<hr>
+
+{{#each question in controller}}
+  <h3>{{question.subject}}</h2>
+  <p>{{question.content}}</p>
+  <p>{{question.category}}</p>
+  <p>{{question.formattedUpdatedAt}}</p>
+{{!--   upvotes count --}}
+{{!--   question.user.github_username --}}
+  <hr>
+{{/each}}
