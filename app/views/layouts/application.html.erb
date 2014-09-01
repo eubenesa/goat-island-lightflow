@@ -17,6 +17,10 @@
     <div class="pure-menu pure-menu-open pure-menu-horizontal pure-menu-fixed">
       <a class="pure-menu-heading" href="http://www.lighthouselabs.ca/">Lighthouse Labs</a>
       <a class="pure-menu-heading" href="http://compass.lighthouselabs.ca/days/today">Compass</a>
+
+      <% if current_user %>
+        <a class="pure-menu-heading" id="signout-heading" href="/signout">Log Out</a>
+      <% end %>
     </div>
   </article>
 </header>
