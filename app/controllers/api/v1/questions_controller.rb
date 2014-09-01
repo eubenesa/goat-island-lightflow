@@ -6,9 +6,15 @@ class Api::V1::QuestionsController < ApplicationController
   end
 
   def create
-    # my_params = question_params
-    # my_params[:user_id] = session[:user_id]
-    respond_with :api, :v1, Question.create(question_params)
+    # params = question_params
+    # params[:user_id] = session[:user_id]
+    # binding.pry
+    respond_with :api, :v1, Question.create(
+      subject: params[:question][:subject],
+      content: params[:question][:content],
+      # category: params[:question][:category],
+      user_id: current_user.id
+    )
   end
 
   def show
@@ -17,7 +23,7 @@ class Api::V1::QuestionsController < ApplicationController
 
   def update
     question = Question.find(params[:id])
-    respond_with question.update(question_params)
+    # respond_with question.update(question_params)
   end
 
   def destroy
@@ -25,10 +31,10 @@ class Api::V1::QuestionsController < ApplicationController
     respond_with question.destroy
   end
 
-  private
+  # private
 
-  def question_params
-    params.require(:question).permit(:subject, :content, :category);
-  end
+  # def question_params
+  #   params.require(:question).permit(:subject, :content, :category);
+  # end
 
 end

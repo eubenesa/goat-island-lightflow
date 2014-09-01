@@ -1,4 +1,4 @@
 App.QuestionsController = Ember.ArrayController.extend({
-  sortProperties: ['firstName'],
+  sortProperties: ['updated_at'],
   sortAscending: false
 })
