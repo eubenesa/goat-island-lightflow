@@ -6,6 +6,8 @@ class Api::V1::QuestionsController < ApplicationController
   end
 
   def create
+    # my_params = question_params
+    # my_params[:user_id] = session[:user_id]
     respond_with :api, :v1, Question.create(question_params)
   end
 

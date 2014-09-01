@@ -5,7 +5,7 @@ App.Question = DS.Model.extend({
   upvotes: DS.attr(),
   updated_at: DS.attr(),
 
-  user: DS.belongsTo('user', { async: true }),
+  github_username: DS.attr('string'),
   // answers: DS.hasMany('answer'),
 
   upvotesLength: function() {
