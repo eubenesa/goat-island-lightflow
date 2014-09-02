@@ -3,4 +3,17 @@
 <p><b>Content</b>: {{model.content}}</p>
 <p><b>Posted by</b>: {{model.user.githubUsername}}</p>
 <p><b>Updated</b>: {{model.formattedUpdatedAt}}</p>
+
+{{outlet}}
+
+<h1>questions#show/answers#index</h1>
+{{#each model.answer}}
+{{!--   need to add upvotes --}}
+  <p><b>Content</b>: {{model.answer.content}}</p>
+  <p><b>Posted by</b>: {{model.answer.user.githubUsername}}</p>
+  <hr>
+{{/each}}
+
 <hr>
+
+
