@@ -3,9 +3,9 @@ App.Question = DS.Model.extend({
   content: DS.attr('string'),
   category: DS.attr('string'),
   upvotes: DS.attr(),
-  updated_at: DS.attr(),
+  updatedAt: DS.attr(),
 
-  github_username: DS.attr('string'),
+  user: DS.belongsTo('user'),
   // answers: DS.hasMany('answer'),
 
   upvotesLength: function() {
@@ -13,6 +13,6 @@ App.Question = DS.Model.extend({
   }.property('upvotes'),
 
   formattedUpdatedAt: function() {
-    return moment(this.get('updated_at')).fromNow();
-  }.property('updated_at')
+    return moment(this.get('updatedAt')).fromNow();
+  }.property('updatedAt')
 });
