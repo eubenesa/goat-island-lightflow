@@ -1,8 +1,12 @@
 App.Answer = DS.Model.extend({
   content: DS.attr('string'),
-  upvotes: DS.attr(),
-  updated_at: DS.attr(),
+  // upvotes: DS.attr(),
+  updatedAt: DS.attr(),
 
-  user: DS.belongsTo('user', { async: true }),
-  question: DS.belongsTo('question', { async: true })
+  user: DS.belongsTo('user'),
+  question: DS.belongsTo('question'),
+
+  formattedUpdatedAt: function() {
+    return moment(this.get('updatedAt')).fromNow();
+  }.property('updatedAt')  
 });
