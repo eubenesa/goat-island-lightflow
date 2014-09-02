@@ -1,19 +1,14 @@
 <h1>questions#show</h1>
-<p><b>Subject</b>: {{model.subject}}</p>
+<p><b>Subject</b>: {{subject}}</p>
 <p><b>Content</b>: {{model.content}}</p>
-<p><b>Posted by</b>: {{model.user.githubUsername}}</p>
-<p><b>Updated</b>: {{model.formattedUpdatedAt}}</p>
-
-{{outlet}}
+<p><b>Posted by</b>: {{user.githubUsername}}</p>
+<p><b>Updated</b>: {{formattedUpdatedAt}}</p>
 
 <h1>questions#show/answers#index</h1>
-{{#each model.answer}}
+{{#each answer in answers}}
 {{!--   need to add upvotes --}}
-  <p><b>Content</b>: {{model.answer.content}}</p>
-  <p><b>Posted by</b>: {{model.answer.user.githubUsername}}</p>
+  <p><b>Content</b>: {{answer.content}}</p>
+  <p><b>Posted by</b>: {{user.githubUsername}}</p>
+  <p><b>Updated</b>: {{answer.formattedUpdatedAt}}</p>
   <hr>
 {{/each}}
-
-<hr>
-
-
