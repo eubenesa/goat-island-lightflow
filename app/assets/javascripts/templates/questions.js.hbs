@@ -1,14 +1,12 @@
-<h1>Questions <small>{{#link-to 'questions.new'}}new{{/link-to}}</small></h1>
+<p>{{#link-to 'questions.new'}}questions#create{{/link-to}}</p>
 <hr>
 
 {{outlet}}
 
-{{#each}}
-  <p><b>Subject</b>: {{subject}}</p>
-  <p><b>Content</b>: {{content}}</p>
-{{!--   <p><b>Category</b>: {{question.category}}</p> --}}
-  <p><b>Posted by</b>: {{user.githubUsername}}</p>
-{{!--   <p><b>Upvotes</b>: {{question.upvotesLength}}</p> --}}
-  <p><b>Updated</b>: {{formattedUpdatedAt}}</p>
+<h1>questions#index</h1>
+{{#each question in controller}}
+{{!--   need to add category and upvotes --}}
+  <p><b>Subject</b>: {{#link-to 'question' question}}{{question.subject}}{{/link-to}}</p>
+  <p><b>Posted by</b>: {{question.user.githubUsername}}</p>
   <hr>
 {{/each}}
