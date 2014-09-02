@@ -3,6 +3,6 @@ class QuestionSerializer < ActiveModel::Serializer
 
   embed :ids
 
-  has_one :user
-  has_many :answers
+  has_one :user, include: true
+  has_many :answers, include: true
 end
