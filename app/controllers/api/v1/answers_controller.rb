@@ -6,6 +6,7 @@ class Api::V1::AnswersController < ApplicationController
   end
 
   def create
+    binding.pry
   end
 
   def show

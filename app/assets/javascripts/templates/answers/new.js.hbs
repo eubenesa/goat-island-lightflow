@@ -1,0 +1,13 @@
+<h1>answers#create</h1>
+<form>
+  <fieldset>
+    <dl>
+      <dt><label>Details:</label></dt>
+      <dd>{{view Ember.TextArea valueBinding="fields.content"}}</dd>
+    </dl>
+  </fieldset>
+
+  <fieldset class="actions">
+    <input type="submit" value="Create Answer" {{action 'createAnswer' on="click"}}>
+  </fieldset>
+</form>
