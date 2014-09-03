@@ -2,13 +2,14 @@
 App.Router.reopen({
   rootURL: '/',
   location: 'auto'
-})
+});
 
 App.Router.map(function() {
   this.resource('questions', { path: '/' }, function() {
     this.route('new');
-    this.resource('question', { path: '/questions/:id' }, function() {
-      this.resource('answers', { path: '/questions/:id/' }, function() {
+
+    this.resource('question', { path: '/question/:question_id' }, function() {
+      this.resource('answers', function() {
         this.route('new');
       });
     });
