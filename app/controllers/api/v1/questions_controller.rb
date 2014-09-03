@@ -17,19 +17,14 @@ class Api::V1::QuestionsController < ApplicationController
     respond_with Question.find(params[:id])
   end
 
-  # def update
-  #   question = Question.find(params[:id])
-  #   respond_with question.update(question_params)
-  # end
+  def update
+  end
 
-  # def destroy
-  #   question = Question.find(params[:id])
-  #   respond_with question.destroy
-  # end
+  def destroy
+  end
 
-  # private
+  private
 
-  # def question_params
-  #   params.require(:question).permit(:subject, :content, :category);
-  # end
+  def question_params
+  end
 end

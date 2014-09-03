@@ -1,5 +1,5 @@
 class QuestionSerializer < ActiveModel::Serializer
-  attributes :id, :subject, :content, :category, :upvotes, :updated_at
+  attributes :id, :subject, :content, :updated_at
 
   embed :ids
 

@@ -8,21 +8,15 @@ class Api::V1::AnswersController < ApplicationController
   def create
   end
 
-  # def show
-  #   respond_with Question.find(params[:question_id]).answers.find(params[:id])
-  # end
+  def show
+  end
 
-  # def update
-  #   answer = Question.find(params[:question_id]).answers.find(params[:id])
-  #   respond_with answer.update(answer_params)
-  # end
+  def update
+  end
 
-  # def destroy
-  #   answer = Question.find(params[:question_id]).answers.find(params[:id])
-  #   respond_with answer.destroy
-  # end
+  def destroy
+  end
 
-  # def answer_params
-  #   params.require(:answer).permit(:content)
-  # end
+  def answer_params
+  end
 end
