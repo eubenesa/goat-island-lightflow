@@ -5,8 +5,8 @@
 
 <h1>questions#index</h1>
 {{#each question in controller}}
-{{!--   need to add category and upvotes --}}
-  <p><b>Subject</b>: {{#link-to 'question' question}}{{question.subject}}{{/link-to}}</p>
-  <p><b>Posted by</b>: {{question.user.githubUsername}}</p>
+  <p><b>Topic</b>: {{#link-to 'question' question}}{{question.subject}}{{/link-to}}</p>
+  <p><b>User</b>: {{question.user.githubUsername}}</p>
+  <p><b>Activity</b>: {{question.formattedUpdatedAt}}</p>
   <hr>
 {{/each}}
