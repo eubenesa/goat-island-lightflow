@@ -13,3 +13,10 @@
  *= require_tree .
  *= require_self
  */
+#twitter-link {
+  color: #565d64;
+}
+
+#twitter-link:hover {
+  color: #ffffff;
+}
