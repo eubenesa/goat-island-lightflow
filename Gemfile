@@ -51,4 +51,4 @@ gem 'ember-source'
 
 gem 'omniauth-github'
 gem 'puma'
-gem 'slim-rails'
+# gem 'slim-rails'
