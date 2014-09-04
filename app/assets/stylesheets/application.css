@@ -13,14 +13,15 @@
  *= require_tree .
  *= require_self
  */
-.before-lhl-member, #email-don {
+.before-lhl-member {
   color: #ffffff;
 }
 
-#twitter-link {
+.made-with-love {
   color: #565d64;
+  text-decoration: none;
 }
 
-#twitter-link:hover {
+.made-with-love:hover {
   color: #ffffff;
 }
