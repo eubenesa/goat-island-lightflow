@@ -1,0 +1,23 @@
+<div class="splash-container">
+  <div class="splash">
+    <h1 class="splash-head">Goat Island Lightflow</h1>
+    <p class="splash-subhead">
+      Is KV not around? Don having a beer? Ask your question here.
+    </p>
+
+    <% if current_user %>
+
+    <% else %>
+      <p>
+        <a href="/auth/github" class="pure-button pure-button-primary">
+          <i class="fa fa-github fa-lg">&nbsp;Log in with Github</i>
+        </a>
+      </p>
+    <% end %>
+  </div>
+</div>
+<div class="content-wrapper">
+  <div class="footer l-box is-center">
+    Eubene Sa &copy 2014 | Made with love at Lighthouse Labs in Gastown
+  </div>
+</div>

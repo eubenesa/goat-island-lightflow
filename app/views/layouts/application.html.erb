@@ -3,8 +3,10 @@
 <head>
   <title>Goat Island Lightflow</title>
 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
-  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
 
   <%= stylesheet_link_tag    'application' %>
   <%= javascript_include_tag 'application' %>
@@ -12,18 +14,18 @@
 </head>
 <body>
 
-<header>
-  <article>
-    <div class="pure-menu pure-menu-open pure-menu-horizontal pure-menu-fixed">
-      <a class="pure-menu-heading" href="http://www.lighthouselabs.ca/">Lighthouse Labs</a>
-      <a class="pure-menu-heading" href="http://compass.lighthouselabs.ca/days/today">Compass</a>
-
+<div class="header">
+  <div class="home-menu pure-menu pure-menu-open pure-menu-horizontal pure-menu-fixed">
+    <a class="pure-menu-heading" href="/">Goat Island Lightflow</a>
+    <ul>
+      <li><a href="http://www.lighthouselabs.ca/">Lighthouse Labs</a></li>
+      <li><a href="http://compass.lighthouselabs.ca/">Compass</a></li>
       <% if current_user %>
-        <a class="pure-menu-heading" id="signout-heading" href="/signout">Log Out</a>
+        <li><a href="/signout">Log Out</a></li>
       <% end %>
-    </div>
-  </article>
-</header>
+    </ul>
+  </div>
+</div>
 
 <%= yield %>
 
