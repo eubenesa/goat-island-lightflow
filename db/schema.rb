@@ -18,7 +18,6 @@ ActiveRecord::Schema.define(version: 20140827210805) do
 
   create_table "answers", force: true do |t|
     t.text     "content"
-    t.integer  "upvotes",     array: true
     t.integer  "user_id"
     t.integer  "question_id"
     t.datetime "created_at"
@@ -26,20 +25,16 @@ ActiveRecord::Schema.define(version: 20140827210805) do
   end
 
   add_index "answers", ["question_id"], name: "index_answers_on_question_id", using: :btree
-  add_index "answers", ["upvotes"], name: "index_answers_on_upvotes", using: :gin
   add_index "answers", ["user_id"], name: "index_answers_on_user_id", using: :btree
 
   create_table "questions", force: true do |t|
     t.string   "subject"
     t.text     "content"
-    t.string   "category"
-    t.integer  "upvotes",    array: true
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  add_index "questions", ["upvotes"], name: "index_questions_on_upvotes", using: :gin
   add_index "questions", ["user_id"], name: "index_questions_on_user_id", using: :btree
 
   create_table "users", force: true do |t|
