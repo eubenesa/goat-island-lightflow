@@ -60,5 +60,5 @@ Rails.application.routes.draw do
     resources :answers, except: [:new, :edit]
   end
 
-  get '*path', to: 'questions#index'
+  # get '*path', to: 'questions#index'
 end

@@ -18,20 +18,7 @@
     </div>
 
     <div class="answers">
-      <h1 class="content-subhead-blog">Answers | {{#link-to 'answers.new'}}+Your Answer{{/link-to}}</h1>
-
-      {{#each answer in answers}}
-        <section class="post">
-          <header class="post-header">
-            <div class="post-description">
-              <p>{{answer.content}}</p>
-            </div>
-            <p class="post-meta">
-              By {{answer.user.githubUsername}} | {{answer.formattedUpdatedAt}}
-            </p>
-          </header>
-        </section>
-      {{/each}}
+      <h1 class="content-subhead-blog">{{#link-to 'answers.index'}}Answers{{/link-to}}</h1>
     </div>
 
   </div>

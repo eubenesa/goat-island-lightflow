@@ -12,8 +12,6 @@ App.Router.map(function () {
   this.resource('question', { path: '/questions/:question_id' }, function () {
     this.resource('answers', function () {
       this.route('new');
-      this.route('create');
     });
-    this.route('answer', { path: 'answers/:answer_id' });
   });
 });

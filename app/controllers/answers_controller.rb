@@ -9,7 +9,17 @@ class AnswersController < ApplicationController
   end
 
   def create
-    binding.pry
+    question = Question.find(params[:question_id])
+    answer = question.answers.create(
+      content: params[:answer][:content],
+      user_id: current_user.id,
+      question_id: params[:question_id].to_i
+    )
+
+    respond_to do |f|
+      f.html
+      f.json { render :json => answer }
+    end
   end
 
   def show
@@ -26,6 +36,8 @@ class AnswersController < ApplicationController
 
   def destroy
   end
+
+  private
 
   def answer_params
   end
