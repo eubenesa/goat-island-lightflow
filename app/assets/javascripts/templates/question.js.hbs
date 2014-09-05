@@ -1,9 +1,0 @@
-<h1>questions#show</h1>
-<p><b>Topic</b>: {{model.subject}}</p>
-<p><b>Details</b>: {{model.content}}</p>
-<p><b>User</b>: {{model.user.githubUsername}}</p>
-<p><b>Activity</b>: {{model.formattedUpdatedAt}}</p>
-
-<p>{{#link-to 'answers'}}answers#index{{/link-to}}</p>
-
-{{outlet}}

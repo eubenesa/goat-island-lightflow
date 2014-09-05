@@ -1,13 +1,22 @@
-<h1>answers#create</h1>
-<form>
-  <fieldset>
-    <dl>
-      <dt><label>Details:</label></dt>
-      <dd>{{view Ember.TextArea valueBinding="fields.content"}}</dd>
-    </dl>
-  </fieldset>
+<div id="layout-blog" class="pure-g">
+  <div class="content-blog pure-u-1 pure-u-md-3-4">
 
-  <fieldset class="actions">
-    <input type="submit" value="Create Answer" {{action 'createAnswer' on="click"}}>
-  </fieldset>
-</form>
+    <h1 class="content-subhead-blog">Your Answer</h1>
+
+    <form class="pure-form pure-form-stacked form-blog">
+      <fieldset>
+          <label for="subject">Answer</label>
+          {{view Ember.TextField valueBinding="text"}}
+
+          <input type="submit" value="Create Answer" class="pure-button pure-button-primary" {{action 'createAnswer' on="click"}}>
+      </fieldset>
+    </form>
+
+  </div>
+</div>
+
+<div class="content-wrapper">
+  <div class="footer l-box is-center">
+    <a href="https://twitter.com/EubeneSa" class="made-with-love">Eubene Sa</a> &copy 2014 | Made with <a href="http://emberjs.com/" class="made-with-love">&#9829</a> at Lighthouse Labs in Gastown, Beautiful British Columbia
+  </div>
+</div>

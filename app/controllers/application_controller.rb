@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
   before_action :require_login_lhl_member
 
   def require_login_lhl_member
-    redirect_to welcome_path unless current_user && current_user.lhl_member
+    redirect_to root_path unless current_user && current_user.lhl_member
   end
 
   helper_method :current_user
@@ -19,7 +19,7 @@ class ApplicationController < ActionController::Base
 
   def redirect_if_lhl_member
     if current_user && current_user.lhl_member
-      redirect_to root_path
+      redirect_to questions_path
     end
   end
 end

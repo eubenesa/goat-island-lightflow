@@ -8,14 +8,14 @@ class SessionsController < ApplicationController
     @current_user = User.find_by(uid: auth['uid']) || User.create_with_omniauth(auth)
     session[:user_id] = @current_user.id
     if @current_user.lhl_member
-      redirect_to :root
+      redirect_to questions_path
     else
-      redirect_to welcome_path
+      redirect_to root_path
     end
   end
 
   def destroy
     reset_session
-    redirect_to welcome_path
+    redirect_to root_path
   end
 end

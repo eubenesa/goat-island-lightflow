@@ -4,7 +4,7 @@ App.Question = DS.Model.extend({
   updatedAt: DS.attr(),
 
   user: DS.belongsTo('user'),
-  answers: DS.hasMany('answer'),
+  answers: DS.hasMany('answer', {async: true}),
 
   formattedUpdatedAt: function() {
     return moment(this.get('updatedAt')).fromNow();

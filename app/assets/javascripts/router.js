@@ -4,14 +4,16 @@ App.Router.reopen({
   location: 'auto'
 });
 
-App.Router.map(function() {
-  this.resource('questions', { path: '/' }, function() {
+App.Router.map(function () {
+  this.resource('questions', function () {
     this.route('new');
+  });
 
-    this.resource('question', { path: '/question/:question_id' }, function() {
-      this.resource('answers', function() {
-        this.route('new');
-      });
+  this.resource('question', { path: '/questions/:question_id' }, function () {
+    this.resource('answers', function () {
+      this.route('new');
+      this.route('create');
     });
+    this.route('answer', { path: 'answers/:answer_id' });
   });
 });

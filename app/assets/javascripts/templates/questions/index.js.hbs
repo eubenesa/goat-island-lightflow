@@ -1,9 +1,7 @@
 <div id="layout-blog" class="pure-g">
   <div class="content-blog pure-u-1 pure-u-md-3-4">
 
-    {{outlet}}
-
-    <div class="posts">
+    <div class="questions">
       <h1 class="content-subhead-blog">Recent Topics | {{#link-to 'questions.new'}}+New Topic{{/link-to}}</h1>
 
       {{#each question in controller}}
@@ -14,19 +12,12 @@
               By {{question.user.githubUsername}} | {{question.formattedUpdatedAt}}
             </p>
           </header>
-{{!--           <div class="post-description">
-            <p>{{question.content}}</p>
-          </div> --}}
         </section>
       {{/each}}
-
     </div>
+
   </div>
 </div>
-
-{{!-- <p>{{#link-to 'questions.new'}}questions#create{{/link-to}}</p> --}}
-{{!-- {{outlet}} --}}
-{{!-- <p>{{#link-to 'question' question}}{{question.subject}}{{/link-to}}</p> --}}
 
 <div class="content-wrapper">
   <div class="footer l-box is-center">
