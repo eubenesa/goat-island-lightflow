@@ -1,18 +1,13 @@
-<h1>questions#create</h1>
-<form>
-  <fieldset>
-    <dl>
-      <dt><label>Topic:</label></dt>
-      <dd>{{view Ember.TextArea valueBinding="fields.subject"}}</dd>
-    </dl>
+  <h1 class="content-subhead-blog">New Topic</h1>
 
-    <dl>
-      <dt><label>Details:</label></dt>
-      <dd>{{view Ember.TextArea valueBinding="fields.content"}}</dd>
-    </dl>
-  </fieldset>
+  <form class="pure-form pure-form-stacked form-blog">
+    <fieldset>
+        <label for="subject">Topic</label>
+        {{view Ember.TextField valueBinding="fields.subject"}}
 
-  <fieldset class="actions">
-    <input type="submit" value="Create Topic" {{action 'createQuestion' on="click"}}>
-  </fieldset>
-</form>
+        <label for="details">Details</label>
+        {{view Ember.TextField valueBinding="fields.content"}}
+
+        <input type="submit" value="Create Topic" class="pure-button pure-button-primary" {{action 'createQuestion' on="click"}}>
+    </fieldset>
+  </form>

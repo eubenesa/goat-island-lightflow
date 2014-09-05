@@ -22,6 +22,7 @@
   text-decoration: none;
 }
 
-.made-with-love:hover {
+.made-with-love:focus, .made-with-love:hover {
   color: #ffffff;
+  text-decoration: underline;
 }

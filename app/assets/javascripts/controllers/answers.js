@@ -1,4 +1,4 @@
-App.AnswersIndexController = Ember.ArrayController.extend({
+App.AnswersController = Ember.ArrayController.extend({
   sortProperties: ['updatedAt'],
   sortAscending: false
 });
