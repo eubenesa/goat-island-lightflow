@@ -18,7 +18,7 @@ App.AnswersNewController = Ember.ObjectController.extend({
         question.get('answers').pushObject(answer);
       });
 
-      self.transitionToRoute('answers.index');
+      self.transitionToRoute('question.index');
     }
   }
 });
