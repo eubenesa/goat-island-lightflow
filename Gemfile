@@ -51,4 +51,7 @@ gem 'ember-source'
 
 gem 'omniauth-github'
 gem 'puma'
-# gem 'slim-rails'
+
+group :production do
+  gem 'sprockets'
+end
