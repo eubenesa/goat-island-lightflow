@@ -82,4 +82,5 @@ Rails.application.configure do
 
   config.ember.variant = :production
   config.assets.initialize_on_precompile = false
+  HandlebarsAssets::Config.ember = true
 end
