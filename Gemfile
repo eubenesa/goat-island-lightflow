@@ -51,3 +51,7 @@ gem 'ember-source'
 
 gem 'omniauth-github'
 gem 'puma'
+
+group :production do
+  gem 'handlebars_assets'
+end
