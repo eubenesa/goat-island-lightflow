@@ -1,0 +1,1 @@
+window.Ember.TEMPLATES.application=Ember.Handlebars.compile('<section id="ember-main">{{outlet}}</section>');
