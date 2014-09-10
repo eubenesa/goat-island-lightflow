@@ -1,6 +1,6 @@
 # [Goat Island Lightflow](http://goatislandlightflow.herokuapp.com/)
 
-[![Codeship Status for eubenesa/goat-island-lightflow](https://codeship.io/projects/d759f9a0-0f87-0132-3a96-42e120fa204e/status)](https://codeship.io/projects/32662)
+## [![Codeship Status for eubenesa/goat-island-lightflow](https://codeship.io/projects/d759f9a0-0f87-0132-3a96-42e120fa204e/status)](https://codeship.io/projects/32662)
 
 Lighthouse Labs final project  
 Brought to you by Eubene Sa
