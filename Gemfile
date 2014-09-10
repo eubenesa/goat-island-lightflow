@@ -41,7 +41,6 @@ gem 'spring',        group: :development
 
 group :development, :test do
   gem 'dotenv-rails'
-  gem 'ffaker'
   gem 'pry-rails'
   gem 'rspec-rails'
 end
@@ -49,6 +48,7 @@ end
 gem 'ember-rails'
 gem 'ember-source'
 
+gem 'ffaker'
 gem 'omniauth-github'
 gem 'puma'
 
