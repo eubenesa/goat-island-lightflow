@@ -7,10 +7,10 @@ Brought to you by Eubene Sa
 
 ## The stack
 
-* Ember.js 1.7.0 / Ember Data 1.0.0-beta.9 using `ember-rails`
+* JavaScript / Ember.js 1.7.0 / Ember Data 1.0.0-beta.9 using `ember-rails`
 * Ruby 2.1.2 on Rails 4.1.5
 * Github API
-* Pure/HTML5/CSS3
+* Pure / HTML5 / CSS3
 * PostgreSQL
 
 ## Getting it up and running locally
